@@ -1,3 +1,4 @@
+pub mod searching;
 #[cfg(test)]
 mod tests {
     #[test]
