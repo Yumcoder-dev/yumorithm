@@ -11,7 +11,7 @@ Currently, we have developed the following data structures and algorithms:
 
 ### Search Algorithms
 
-[x] linear search
+- linear search
 
 ## Useful resources
 
