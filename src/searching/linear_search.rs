@@ -2,10 +2,9 @@
 // Problem: a linear search or sequential search is a method for finding 
 // an element within a list. It sequentially checks each element of 
 // the list until a match is found or the whole list has been searched.
-
-// find item in a array through leaner search
-// item: reference to search item
-// arr: reference to array that search in it
+//
+// item: references to search item
+// arr: references to array that search in it
 //
 // All inputs should be T that implemented PartialEq trait for
 // equality comparisons (`x == y` and `x != y`)
