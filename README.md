@@ -9,7 +9,7 @@ a specific purpose.
 
 Currently, we have developed the following data structures and algorithms:
 
-### Search Algorithms
+### [Search Algorithms](https://github.com/YumcoderCom/yumorithm/tree/main/src/searching)
 
 - linear search
 
