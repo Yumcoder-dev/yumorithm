@@ -6,6 +6,7 @@
  * @desc Yumorithm a Rust Algorithm library
  */
 pub mod searching;
+mod sorting;
 #[cfg(test)]
 mod tests {
     #[test]

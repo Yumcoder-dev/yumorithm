@@ -48,13 +48,13 @@ mod tests {
     use super::*;
 
     #[test]
-    fn linear_search_strings() {
+    fn linear_search_strings_test() {
         let index = linear_search(&"a", &vec!["a", "b", "c", "d"]);
         assert_eq!(index, Some(0));
     }
 
     #[test]
-    fn linear_search_ints() {
+    fn linear_search_ints_test() {
         struct Tests {
             ds: Vec<i32>,
             cases: Vec<(i32, Option<usize>)>,
@@ -71,13 +71,13 @@ mod tests {
     }
 
     #[test]
-    fn linear_search_not_found() {
+    fn linear_search_not_found_test() {
         let index = linear_search(&5, &vec![1, 2, 3, 4]);
         assert_eq!(index, None);
     }
 
     #[test]
-    fn linear_search_empty() {
+    fn linear_search_empty_test() {
         let index = linear_search(&1, &vec![]);
         assert_eq!(index, None);
     }

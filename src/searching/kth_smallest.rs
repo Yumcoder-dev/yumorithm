@@ -4,6 +4,7 @@ use std::cmp::Ordering;
 // on the input array recursively. But unlike quicksort, which processes both sides of
 // the array recursively, this algorithm works on only one side of the partition.
 // We recur for either the left or right side according to the position of pivot.
+// see also https://afteracademy.com/blog/kth-smallest-element-in-an-array
 pub fn kth_smallest<T: PartialOrd + Copy>(arr: &mut [T], k: usize) -> Option<T> {
     if arr.is_empty() {
         return None;
@@ -124,7 +125,7 @@ mod tests {
     }
 
     #[test]
-    fn kth_smallest_empty() {
+    fn kth_smallest_empty_test() {
         let mut zero: [u8; 0] = [];
         let first = kth_smallest(&mut zero, 1);
 
@@ -132,7 +133,7 @@ mod tests {
     }
 
     #[test]
-    fn kth_smallest_has_one_element() {
+    fn kth_smallest_has_one_element_test() {
         let mut one = [1];
         let first = kth_smallest(&mut one, 1);
 
@@ -140,7 +141,7 @@ mod tests {
     }
 
     #[test]
-    fn kth_smallest_has_n_elements() {
+    fn kth_smallest_has_n_elements_test() {
         // 0 1 3 4 5 7 8 9 9 10 12 13 16 17
         let mut many = [9, 17, 3, 16, 13, 10, 1, 5, 7, 12, 4, 8, 9, 0];
 
