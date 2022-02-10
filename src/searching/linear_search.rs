@@ -1,16 +1,28 @@
+/**
+ * @author Yumcoder
+ * @email omid.jn@gmail.com
+ * @create date 2022-02-01 23:16:42
+ * @modify date 2022-02-01 23:16:42
+ * @desc implemented leaner search in Rust
+ */
 
-// Problem: a linear search or sequential search is a method for finding 
-// an element within a list. It sequentially checks each element of 
-// the list until a match is found or the whole list has been searched.
-//
-// item: references to search item
-// arr: references to array that search in it
-//
-// All inputs should be T that implemented PartialEq trait for
-// equality comparisons (`x == y` and `x != y`)
+/// A linear search or sequential search is a method for finding
+/// an element within a collection. It sequentially checks each element of
+/// the collection until a match is found or the whole collection has been searched.
+///
+/// # Examples
+///
+/// ```
+/// use yumorithm::searching;
+///
+/// assert_eq!(&10, &vec![1, 2, 3], None);
+/// assert_eq!(&1, &vec![1, 2, 3], Some(0));
+/// ```
 pub fn linear_search<T: PartialEq>(item: &T, arr: &[T]) -> Option<usize> {
+    // All inputs should be T that implemented PartialEq trait for
+    // equality comparisons (`x == y` and `x != y`)
     // create an iterator that returns (index, data)
-    // 
+    //
     // # Examples
     //
     // ```
@@ -23,39 +35,33 @@ pub fn linear_search<T: PartialEq>(item: &T, arr: &[T]) -> Option<usize> {
     // assert_eq!(iter.next(), Some((2, &'c')));
     // assert_eq!(iter.next(), None);
     // ```
-    for (i , data) in arr.iter().enumerate() {
+    for (i, data) in arr.iter().enumerate() {
         if data == item {
-            return Some(i)
+            return Some(i);
         }
     }
     None
 }
-
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
-    fn search_strings() {
+    fn linear_search_strings() {
         let index = linear_search(&"a", &vec!["a", "b", "c", "d"]);
         assert_eq!(index, Some(0));
     }
 
     #[test]
-    fn search_ints() {
-       struct Tests {
-            ds : Vec<i32>,
-            cases : Vec<(i32, Option<usize>)>
+    fn linear_search_ints() {
+        struct Tests {
+            ds: Vec<i32>,
+            cases: Vec<(i32, Option<usize>)>,
         }
         let tests = Tests {
-            ds:vec![1, 2, 3, 4],
-            cases: vec![
-                (1, Some(0)), 
-                (2, Some(1)), 
-                (3, Some(2)), 
-                (4, Some(3)), 
-            ]
+            ds: vec![1, 2, 3, 4],
+            cases: vec![(1, Some(0)), (2, Some(1)), (3, Some(2)), (4, Some(3))],
         };
 
         for test in tests.cases.iter() {
@@ -65,13 +71,13 @@ mod tests {
     }
 
     #[test]
-    fn not_found() {
+    fn linear_search_not_found() {
         let index = linear_search(&5, &vec![1, 2, 3, 4]);
         assert_eq!(index, None);
     }
 
     #[test]
-    fn empty() {
+    fn linear_search_empty() {
         let index = linear_search(&1, &vec![]);
         assert_eq!(index, None);
     }
