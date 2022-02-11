@@ -2,7 +2,7 @@
 
 They are designed to find the index of an item in a collection.
 
-## Linear search
+## [Linear search](https://github.com/YumcoderCom/yumorithm/blob/main/src/searching/linear_search.rs)
 
 It is a sequential search is made over all items one by one.
 Every item is evaluated and if a equal to given item then index is returned,
@@ -14,7 +14,7 @@ otherwise the search continues till the end of the collection.
 
 [Linear Search Visualizations](<https://www.cs.usfca.edu/~galles/visualization/Search.html>)
 
-## Binary search
+## [Binary search](https://github.com/YumcoderCom/yumorithm/blob/main/src/searching/binary_search.rs)
 
 It is a search algorithm that finds the position of a target value within a **sorted array**.
 A binary search will start by examining the middle item.
@@ -54,7 +54,7 @@ of our possible search space.
                       └─► mid
 ```
 
-## find kth Smallest item
+## [Find kth smallest item](https://github.com/YumcoderCom/yumorithm/blob/main/src/searching/kth_smallest.rs)
 
 This approach is similar to the quick sort algorithm where we use the partition
 on the input array recursively. But unlike quicksort, which processes both sides of
