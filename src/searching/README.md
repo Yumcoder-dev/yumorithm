@@ -29,6 +29,31 @@ of our possible search space.
 
 [Linear Search Visualizations](<https://www.cs.usfca.edu/~galles/visualization/Search.html>)
 
+ In the following example iterations to find 7 in the given array are illustrated:
+ ```
+ ┌──────────────────────────┐
+ │  -5 -2 0 1 2 4 5 6 7 10  │   search item = 7
+ └──┬─────────┬─────────┬───┘
+    │         │         │
+    │        mid        │
+   low                 high
+
+ ┌──────────────────────────┐
+ │              4 5 6 7 10  │
+ └──────────────┬───┬───┬───┘
+                │   │   │
+                │  mid  │
+               low     high
+
+ ┌──────────────────────────┐
+ │                  6 7 10  │
+ └──────────────────┬─┬─┬───┘
+                    │ │ │
+                    │ │ │
+                   low│high
+                      └─► mid
+```
+
 ## find kth Smallest item
 
 This approach is similar to the quick sort algorithm where we use the partition
@@ -37,3 +62,73 @@ the array recursively, this algorithm works on only one side of the partition.
 We recur for either the left or right side according to the position of pivot.
 
 - Theoretically, this algorithm still has the complexity of O(n log n), but practically, you do not need to sort the entire array before you find k smallest elements.
+
+```
+ Partition the array A[left .. right] into two subarrays
+ A[left .. pos] and A[pos + 1 .. right]
+ such that each element of A[left .. pos] is less than each element of A[pos + 1 .. right]
+
+ ┌──────────┬─┬──────────┐
+ │   <= x   │x│    >= x  │
+ └──────────┴─┴──────────┘
+
+ ┌────────────────────┐
+ │ 6 10 13 5 8 3 2 11 │              pivot=a[0]=6
+ └─┬─┬────────────────┘
+   │ │
+   i j
+
+ ┌────────────────────┐
+ │ 6 10 13 5 8 3 2 11 │              pivot=a[0]=6
+ └─┬────┬─────────────┘
+   │    │
+   i ─► j
+
+ ┌────────────────────┐
+ │ 6 10 13 5 8 3 2 11 │              pivot=a[0]=6
+ └─┬───────┬──────────┘
+   │       │
+   i ────► j
+
+             ┌─────┐
+         ┌───▼─────▼──────────┐
+         │ 6 5 13 10 8 3 2 11 │      pivot=a[0]=6
+         └───┬─────┬──────────┘
+             │     │
+          ──►i     j
+
+ ┌────────────────────┐
+ │ 6 5 13 10 8 3 2 11 │              pivot=a[0]=6
+ └───┬───────┬────────┘
+     │       │
+  ──►i       j
+
+            ┌───────┐
+      ┌─────▼───────▼──────┐
+      │ 6 5 3 10 8 13 2 11 │         pivot=a[0]=6
+      └─────┬───────┬──────┘
+            │       │
+       ───► i       j
+
+              ┌───────┐
+      ┌───────▼───────▼────┐
+      │ 6 5 3 2 8 13 10 11 │         pivot=a[0]=6
+      └───────┬───────┬────┘
+              │       │
+       ─────► i       j
+
+
+ ┌────────────────────┐
+ │ 6 5 3 2 8 13 10 11 │              pivot=a[0]=6
+ └───────┬──────────┬─┘
+         │          │
+  ─────► i          j
+
+
+        ┌─────┐
+      ┌─▼─────▼────────────┐
+      │ 2 5 3 6 8 13 10 11 │        swap pivot and x
+      └───────┬──────────┬─┘
+              │          │
+       ─────► i          j
+```
