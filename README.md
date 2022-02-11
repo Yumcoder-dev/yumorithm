@@ -11,6 +11,17 @@ a specific purpose.
 Currently, we have developed the following data structures and algorithms:
 
 - [Search Algorithms](https://github.com/YumcoderCom/yumorithm/tree/main/src/searching)
+- [ ] Sorting
+- [ ] Data Structures
+- [ ] Dynamic Programming
+- [ ] Graph
+- [ ] Math
+- [ ] String
+- [ ] Cipher
+- [ ] Hash
+- [ ] Geometry
+- [ ] Consensus algorithm
+- [ ] Distributed global unique ID generation
 
 ## Useful resources
 
