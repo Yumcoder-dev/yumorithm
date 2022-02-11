@@ -20,6 +20,7 @@ Currently, we have developed the following data structures and algorithms:
 - [ ] Cipher
 - [ ] Hash
 - [ ] Geometry
+- [ ] Data base and cache
 - [ ] Consensus algorithm
 - [ ] Distributed global unique ID generation
 
