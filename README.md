@@ -4,7 +4,7 @@ An Algorithm is an explicit, precise, unambiguous mechanically-executable
 sequence of elementary instructions, usually intended to accomplish
 a specific purpose.
 
-**Yumorithm** is a collection of algorithms implemented in Rust (for educational purposes).
+**Yumorithm** is a collection of algorithms that are implemented in Rust (for educational purposes).
 
 ## Implemented algorithms
 
