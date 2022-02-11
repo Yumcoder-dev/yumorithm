@@ -47,7 +47,7 @@ with the upper half. Start at the middle item and compare it against what we are
 Again, we either find it or split the list in half, therefore eliminating another large part
 of our possible search space.
 
-[Linear Search Visualizations](<https://www.cs.usfca.edu/~galles/visualization/Search.html>)
+[Binary Search Visualizations](<https://www.cs.usfca.edu/~galles/visualization/Search.html>)
 
  In the following example iterations to find 7 in the given array are illustrated:
  ```
@@ -151,4 +151,21 @@ We recur for either the left or right side according to the position of pivot.
       └───────┬──────────┬─┘
               │          │
        ─────► i          j
+```
+
+## [Jump Search](https://github.com/YumcoderCom/yumorithm/blob/main/src/searching/jump_search.rs)
+
+It is a searching algorithm for sorted arrays.
+The basic idea is to check fewer elements (than linear search) by jumping ahead
+by fixed steps or skipping some elements in place of searching all elements.
+
+- the best/optimal block/jump size is √N
+- Worst case time complexity: O(√N)
+- Average case time complexity: O(√N)
+- Best case time complexity: O(1)
+
+[Jump Search Visualizations](<https://harkishen-singh.github.io/jump-search-visualisation/>)
+
+```
+
 ```
