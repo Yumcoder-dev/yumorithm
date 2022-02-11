@@ -14,6 +14,26 @@ otherwise the search continues till the end of the collection.
 
 [Linear Search Visualizations](<https://www.cs.usfca.edu/~galles/visualization/Search.html>)
 
+```
+ ┌──────────────────┐
+ │  -5 -2 0 7 9 10  │  search item = 7
+ └───┬──▲───────────┘
+     │  │
+     └──┘
+
+ ┌──────────────────┐
+ │  -5 -2 0 7 9 10  │
+ └──────┬─▲─────────┘
+        │ │
+        └─┘
+
+ ┌──────────────────┐
+ │  -5 -2 0 7 9 10  │
+ └────────┬─▲───────┘
+          │ │
+          └─┘
+```
+
 ## [Binary search](https://github.com/YumcoderCom/yumorithm/blob/main/src/searching/binary_search.rs)
 
 It is a search algorithm that finds the position of a target value within a **sorted array**.

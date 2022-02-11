@@ -10,6 +10,23 @@
 /// assert_eq!(searching::linear_search(&10, &vec![1, 2, 3]), None);
 /// assert_eq!(searching::linear_search(&1, &vec![1, 2, 3]), Some(0));
 /// ```
+/// ┌──────────────────┐
+/// │  -5 -2 0 7 9 10  │  search item = 7
+/// └───┬──▲───────────┘
+///     │  │
+///     └──┘
+///
+/// ┌──────────────────┐
+/// │  -5 -2 0 7 9 10  │
+/// └──────┬─▲─────────┘
+///        │ │
+///        └─┘
+///
+/// ┌──────────────────┐
+/// │  -5 -2 0 7 9 10  │
+/// └────────┬─▲───────┘
+///          │ │
+///          └─┘
 pub fn linear_search<T: PartialEq>(item: &T, arr: &[T]) -> Option<usize> {
     // All inputs should be T that implemented PartialEq trait for
     // equality comparisons (`x == y` and `x != y`)
