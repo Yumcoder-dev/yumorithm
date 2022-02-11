@@ -1,11 +1,3 @@
-/**
- * @author Yumcoder
- * @email omid.jn@gmail.com
- * @create date 2022-02-01 23:16:42
- * @modify date 2022-02-01 23:16:42
- * @desc implemented leaner search in Rust
- */
-
 /// A linear search or sequential search is a method for finding
 /// an element within a collection. It sequentially checks each element of
 /// the collection until a match is found or the whole collection has been searched.
@@ -15,8 +7,8 @@
 /// ```
 /// use yumorithm::searching;
 ///
-/// assert_eq!(&10, &vec![1, 2, 3], None);
-/// assert_eq!(&1, &vec![1, 2, 3], Some(0));
+/// assert_eq!(searching::linear_search(&10, &vec![1, 2, 3]), None);
+/// assert_eq!(searching::linear_search(&1, &vec![1, 2, 3]), Some(0));
 /// ```
 pub fn linear_search<T: PartialEq>(item: &T, arr: &[T]) -> Option<usize> {
     // All inputs should be T that implemented PartialEq trait for
