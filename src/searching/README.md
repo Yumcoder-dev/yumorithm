@@ -35,3 +35,5 @@ This approach is similar to the quick sort algorithm where we use the partition
 on the input array recursively. But unlike quicksort, which processes both sides of
 the array recursively, this algorithm works on only one side of the partition.
 We recur for either the left or right side according to the position of pivot.
+
+- Theoretically, this algorithm still has the complexity of O(n log n), but practically, you do not need to sort the entire array before you find k smallest elements.
