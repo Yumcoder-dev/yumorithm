@@ -43,7 +43,47 @@ and the elements are swapped if they are not in order. After each iteration, at 
 
 [Visualizations](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 
-## [Selection Sort](https://github.com/YumcoderCom/yumorithm/blob/main/src/sorting/bubble_sort.rs)
+## [Selection Sort](https://github.com/YumcoderCom/yumorithm/blob/main/src/sorting/se;ection_sort.rs)
+
+It is a comparison-based algorithm in which sorts an array by repeatedly finding
+the minimum element (considering ascending order) from unsorted part and putting
+it at the right place
+
+```
+ ┌───────────┬───┬────────────┐
+ │  sorted   │ x │  unsorted  │
+ └───────────┴───┴────────────┘
+ 
+ ┌──────────────┐
+ │ 12 11 13 5 6 │ find the min 1..4
+ └─┬────────────┘
+   │  unsorted
+   x
+ 
+   ┌───────┐
+ ┌─▼───────▼────┐
+ │ 5 11 13 12 6 │  swap(5, 12)
+ └────┬─────────┘
+      │  unsorted
+      x
+ ┌──────────────┐
+ │ 5 6  13 12 11│  swap(6, 11)
+ └───────┬──────┘
+  sorted │ unsorted
+         x
+ 
+ ┌──────────────┐
+ │ 5 6 11 12 13 │ swap(11, 13)
+ └─────────┬────┘
+    sorted │
+           x
+ 
+ ┌──────────────┐
+ │ 5 6 11 12 13 │
+ └───────────┬──┘
+             │
+             x
+```
 
 [Visualizations](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 

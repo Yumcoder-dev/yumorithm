@@ -79,19 +79,14 @@ mod tests {
 
     #[test]
     fn insert_sort_test() {
-        struct Tests {
-            cases: Vec<Vec<i32>>,
-        }
-        let mut tests = Tests {
-            cases: vec![
-                vec![46, 50, 41, -3, 2, 0],
-                vec![1, 2, 3],
-                vec![3, 2, 1],
-                vec![1, 2, 3, 5, 4],
-            ],
-        };
+        let mut tests = vec![
+            vec![46, 50, 41, -3, 2, 0],
+            vec![1, 2, 3],
+            vec![3, 2, 1],
+            vec![1, 2, 3, 5, 4],
+        ];
 
-        for t in tests.cases.iter_mut() {
+        for t in tests.iter_mut() {
             insertion_sort(t);
             assert_eq!(true, t.is_sorted());
         }
