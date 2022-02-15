@@ -10,6 +10,35 @@ and the elements are swapped if they are not in order. After each iteration, at 
 - Worst case performance O(n^2)
 - Best case performance O(n)
 
+```
+
+ ┌────────────────┐
+ │ 14 33 27 35 10 │   bubble sort first iteration
+ └─┬───▲──────────┘
+   │   │
+   └───┘
+
+ ┌────────────────┐
+ │ 14 33 27 35 10 │   27 < 33, so exchange them
+ └────┬──▲────────┘
+      │  │
+      └──┘
+
+ ┌────────────────┐
+ │ 14 27 33 35 10 │   33 < 35
+ └───────┬──▲─────┘
+         │  │
+         └──┘
+
+  ┌────────────────┐
+  │ 14 27 33 10 35 │  35 > 10, swapped them
+  └──────────┬──▲──┘
+             │  │
+             └──┘
+ After the first iteration the largest number be at last index of the array
+
+```
+
 [Visualizations](https://www.hackerearth.com/practice/algorithms/sorting/bubble-sort/visualize/)
 
 [Visualizations](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
