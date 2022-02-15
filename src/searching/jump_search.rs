@@ -103,16 +103,19 @@ mod tests {
     }
 
     #[test]
-    fn jump_not_found_test() {
-        assert_eq!(jump_search(&[2, 5, 6, 11], &4), None);
-        assert_eq!(jump_search(&[2, 5, 6, 11], &-1), None);
-        assert_eq!(jump_search(&[2, 5, 6, 11], &110), None);
-    }
-
-    #[test]
     fn jump_search_test() {
-        assert_eq!(jump_search(&[2, 5, 6, 11], &2), Some(0));
-        assert_eq!(jump_search(&[2, 5, 6, 11], &5), Some(1));
-        assert_eq!(jump_search(&[2, 5, 6, 11], &11), Some(3));
+        let tests: Vec<(Vec<i32>, i32, Option<usize>)> = vec![
+            (vec![2, 5, 6, 11], 4, None), // (input_array, search_item, wanted)
+            (vec![2, 5, 6, 11], -1, None),
+            (vec![2, 5, 6, 11], 110, None),
+            (vec![2, 5, 6, 11], 2, Some(0)),
+            (vec![2, 5, 6, 11], 5, Some(1)),
+            (vec![2, 5, 6, 11], 11, Some(3)),
+        ];
+
+        for t in tests.iter() {
+            let index = jump_search(&t.0, &t.1);
+            assert_eq!(index, t.2);
+        }
     }
 }

@@ -27,7 +27,7 @@
 ///             └──┘
 /// After the first iteration the largest number be at last index of the array
 ///
-pub fn bubble_sort<T: Ord>(arr: &mut [T]) {
+pub fn bubble_sort<T: PartialOrd>(arr: &mut [T]) {
     for i in 0..arr.len() {
         let mut swapped = false;
         for j in 0..arr.len() - i - 1 {
@@ -54,22 +54,22 @@ mod tests {
     }
 
     #[test]
-    fn bubble_sort_test() {
+    fn insert_sort_test() {
         struct Tests {
-            cases: Vec<(Vec<i32>, Vec<i32>)>,
+            cases: Vec<Vec<i32>>,
         }
         let mut tests = Tests {
             cases: vec![
-                (vec![46, 50, 41, -3, 2, 0], vec![-3, 0, 2, 41, 46, 50]),
-                (vec![1, 2, 3], vec![1, 2, 3]),
-                (vec![3, 2, 1], vec![1, 2, 3]),
-                (vec![1, 2, 3, 5, 4], vec![1, 2, 3, 4, 5]),
+                vec![46, 50, 41, -3, 2, 0],
+                vec![1, 2, 3],
+                vec![3, 2, 1],
+                vec![1, 2, 3, 5, 4],
             ],
         };
 
-        for test in tests.cases.iter_mut() {
-            bubble_sort(&mut test.0);
-            assert_eq!(test.0, test.1);
+        for t in tests.cases.iter_mut() {
+            bubble_sort(t);
+            assert_eq!(true, t.is_sorted());
         }
     }
 }

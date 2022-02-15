@@ -1,10 +1,6 @@
-/**
- * @author Yumcoder
- * @email omid.jn@gmail.com
- * @create date 2022-02-01 23:19:15
- * @modify date 2022-02-01 23:19:15
- * @desc Yumorithm a Rust Algorithm library
- */
+#![feature(is_sorted)]
+#![feature(iter_order_by)]
+
 pub mod searching;
 mod sorting;
 #[cfg(test)]

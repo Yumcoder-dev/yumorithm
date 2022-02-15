@@ -67,13 +67,17 @@ mod tests {
         }
         let tests = Tests {
             ds: vec![1, 2, 3, 4],
-            // (input, expected result)
-            cases: vec![(1, Some(0)), (2, Some(1)), (3, Some(2)), (4, Some(3))],
+            cases: vec![
+                (1, Some(0)), // (input, wanted)
+                (2, Some(1)),
+                (3, Some(2)),
+                (4, Some(3)),
+            ],
         };
 
-        for test in tests.cases.iter() {
-            let index = binary_search(&test.0, &tests.ds);
-            assert_eq!(index, test.1);
+        for t in tests.cases.iter() {
+            let index = binary_search(&t.0, &tests.ds);
+            assert_eq!(index, t.1);
         }
     }
 
