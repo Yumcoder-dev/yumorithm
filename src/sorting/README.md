@@ -18,7 +18,7 @@ and the elements are swapped if they are not in order. After each iteration, at 
 
 [Visualizations](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html)
 
-## [Insertion Sort](https://github.com/YumcoderCom/yumorithm/blob/main/src/sorting/bubble_sort.rs)
+## [Insertion Sort](https://github.com/YumcoderCom/yumorithm/blob/main/src/sorting/insertion_sort.rs)
 
 Insertion Sort Algorithm
 It is a comparison-based algorithm that builds the final sorted array one at a time.
